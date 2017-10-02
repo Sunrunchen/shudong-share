@@ -4,6 +4,7 @@ require_once('includes/function.php');//函数库
 require_once('includes/connect.php');
 require_once('includes/smarty.inc.php');//smarty模板配置
 require_once('includes/userShell.php');
+ <input type="text"  name="fxurl" value="<https://share.any-share.space/>
 error_reporting(0);//设置错误级别0
 $share_key=$_GET['k'];
 $share_c=inject_check($share_key);
@@ -38,7 +39,7 @@ $head='<script type="text/javascript" src="includes/js/jquery-1.9.1.min.js"></sc
 
 $jscode=$tjcode;
 $smarty->assign("tit", $tit); //应用标题
-$smarty->assign("zzurl", $url); 
+$smarty->assign("fxurl", $url); 
 $smarty->assign("isVisitor", $isVisitor); 
 $smarty->assign("userinfo", $userInfo); 
 $smarty->assign("head", $head); //应用模板头
@@ -80,7 +81,7 @@ $jscode=$tjcode;
 $smarty->assign("uu", "s"); 
 $smarty->assign("stype", "lock"); 
 $smarty->assign("tit", $tit); //应用标题
-$smarty->assign("zzurl", $url); 
+$smarty->assign("fxurl", $url); 
 $smarty->assign("fname", $fname); //文件名
 $smarty->assign("fileurl", $serverUrl.$ming); //外链URL
 $smarty->assign("ming",$ming); //外链URL
